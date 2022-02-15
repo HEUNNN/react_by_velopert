@@ -1,9 +1,13 @@
 import "./App.css";
 import { Fragment } from "react";
+import Counter from "./Counter";
 
 function App() {
-  const name = "apple";
-  return <>{name}</>;
+  return (
+    <div>
+      <Counter></Counter>
+    </div>
+  );
 }
 
 export default App;
