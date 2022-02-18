@@ -12,7 +12,7 @@ const Scroll = () => {
   const innerStyle = {
     width: "100%",
     height: "650px",
-    background: "linear-gradient(white, black)",
+    background: "linear-gradient(white, orange)",
   };
   const scrollToBottom = () => {
     const { scrollHeight, clientHeight } = box.current;
