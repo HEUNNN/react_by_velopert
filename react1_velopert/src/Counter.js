@@ -9,7 +9,8 @@ class Counter extends Component {
   render() {
     const { number } = this.state;
     return (
-      <div>
+      <div className="counter">
+        <h3>Counter Exercise</h3>
         <h1>{number}</h1>
         <button
           onClick={() => {
