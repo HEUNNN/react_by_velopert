@@ -2,6 +2,7 @@ import "./App.css";
 import Counter from "./Counter";
 import { useState } from "react";
 import Info from "./Info";
+import CounterUseReducer from "./CounterUseReducer";
 function App() {
   const [isVisible, setIsVisible] = useState(true);
   return (
@@ -22,6 +23,8 @@ function App() {
       <br />
       {isVisible && <Info />}
       <hr />
+      <h3>Counter with useReducer</h3>
+      <CounterUseReducer />
     </div>
   );
 }
