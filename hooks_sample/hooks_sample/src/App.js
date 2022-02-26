@@ -3,6 +3,7 @@ import Counter from "./Counter";
 import { useState } from "react";
 import Info from "./Info";
 import CounterUseReducer from "./CounterUseReducer";
+import InputUseReducer from "./InputUseReducer";
 function App() {
   const [isVisible, setIsVisible] = useState(true);
   return (
@@ -25,6 +26,9 @@ function App() {
       <hr />
       <h3>Counter with useReducer</h3>
       <CounterUseReducer />
+      <hr />
+      <h3>Input mansgement with useReducer</h3>
+      <InputUseReducer />
     </div>
   );
 }
