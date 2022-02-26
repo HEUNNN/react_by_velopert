@@ -1,8 +1,9 @@
 import { useReducer } from "react";
 const reducer = (state, action) => {
+  //action = e.target
   return {
-    ...state,
-    [action.name]: action.value,
+    ...state, //이전 state 값은 받아오고
+    [action.name]: action.value, //dispatch 통해 전달받은 target의 input 값만 수정
   };
 };
 const InputUseReducer = () => {
