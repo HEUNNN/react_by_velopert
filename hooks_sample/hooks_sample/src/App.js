@@ -7,6 +7,8 @@ import InputUseReducer from "./InputUseReducer";
 import Average from "./Average";
 import RefSample from "./LocalVariableUseRef";
 import InputManagement from "./InputManagement";
+import InfoUseInput from "./InfoUseInput";
+
 function App() {
   const [isVisible, setIsVisible] = useState(true);
   return (
@@ -39,6 +41,7 @@ function App() {
       <h3>Local 변수 - useRef</h3>
       <RefSample />
       <InputManagement />
+      <InfoUseInput />
     </div>
   );
 }
