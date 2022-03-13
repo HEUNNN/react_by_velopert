@@ -14,6 +14,7 @@ const InfoUseInput = () => {
       </div>
       <div>
         <b>이름: {state.userName}</b>
+        <br />
         <b>닉네임: {state.nickName}</b>
       </div>
     </div>
