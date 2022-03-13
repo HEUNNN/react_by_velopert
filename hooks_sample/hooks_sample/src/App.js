@@ -6,6 +6,7 @@ import CounterUseReducer from "./CounterUseReducer";
 import InputUseReducer from "./InputUseReducer";
 import Average from "./Average";
 import RefSample from "./LocalVariableUseRef";
+import InputManagement from "./InputManagement";
 function App() {
   const [isVisible, setIsVisible] = useState(true);
   return (
@@ -29,7 +30,7 @@ function App() {
       <h3>Counter with useReducer</h3>
       <CounterUseReducer />
       <hr />
-      <h3>Input mansgement with useReducer</h3>
+      <h3>Input management with useReducer</h3>
       <InputUseReducer />
       <h3>Average - useRef</h3>
       <Average />
@@ -37,6 +38,7 @@ function App() {
       <br />
       <h3>Local 변수 - useRef</h3>
       <RefSample />
+      <InputManagement />
     </div>
   );
 }
