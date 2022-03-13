@@ -4,7 +4,8 @@ import { useState } from "react";
 import Info from "./Info";
 import CounterUseReducer from "./CounterUseReducer";
 import InputUseReducer from "./InputUseReducer";
-import Average from './Average';
+import Average from "./Average";
+import RefSample from "./LocalVariableUseRef";
 function App() {
   const [isVisible, setIsVisible] = useState(true);
   return (
@@ -31,7 +32,11 @@ function App() {
       <h3>Input mansgement with useReducer</h3>
       <InputUseReducer />
       <h3>Average - useRef</h3>
-      <Average/>
+      <Average />
+      <br />
+      <br />
+      <h3>Local 변수 - useRef</h3>
+      <RefSample />
     </div>
   );
 }
