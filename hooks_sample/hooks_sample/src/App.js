@@ -4,6 +4,7 @@ import { useState } from "react";
 import Info from "./Info";
 import CounterUseReducer from "./CounterUseReducer";
 import InputUseReducer from "./InputUseReducer";
+import Average from './Average';
 function App() {
   const [isVisible, setIsVisible] = useState(true);
   return (
@@ -29,6 +30,8 @@ function App() {
       <hr />
       <h3>Input mansgement with useReducer</h3>
       <InputUseReducer />
+      <h3>Average - useRef</h3>
+      <Average/>
     </div>
   );
 }
