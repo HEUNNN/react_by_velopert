@@ -3,12 +3,11 @@ import { Component } from "react";
 import Counter from "./Counter";
 import Password from "./Password";
 import Scroll from "./Scroll";
-import { useRef } from "react";
 import IterationSample from "./IterationSample";
 import IterationSampleTwo from "./IterationSampleTwo";
 import Validation from "./Validation";
 import LifeCycle from "./LifeCycle";
-import { render } from "@testing-library/react";
+import SassComponent from "./SassComponent";
 
 function getRandomColor() {
   return "#" + Math.floor(Math.random() * 16777215).toString(16);
@@ -43,6 +42,9 @@ class App extends Component {
           <button onClick={this.handleClick}>랜덤 색상</button>
           <LifeCycle color={this.state.color} />
         </div>
+        <br />
+        <h3>Sass Component</h3>
+        <SassComponent />
       </div>
     );
   }
