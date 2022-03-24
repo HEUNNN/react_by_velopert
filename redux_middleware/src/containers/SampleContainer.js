@@ -33,5 +33,6 @@ const mapStateToProps = (state) => ({
   loadingUsers: state.sample.loading.GET_USERS,
 });
 const mapDispatchToProps = { getPost, getUsers };
+//getPost, getUsers 선언할 때 dispatch(action)하여 액션을 발생시키고 리듀서를 실행시킨다.
 
 export default connect(mapStateToProps, mapDispatchToProps)(SampleContainer);
