@@ -13,7 +13,7 @@ const SampleContainer = ({
 }) => {
   useEffect(() => {
     getPost(1); //thunk
-    getUsers(1);
+    getUsers();
   }, [getPost, getUsers]);
 
   return (
@@ -32,7 +32,10 @@ const mapStateToProps = (state) => ({
   loadingPost: state.sample.loading.GET_POST,
   loadingUsers: state.sample.loading.GET_USERS,
 });
-const mapDispatchToProps = { getPost, getUsers };
+const mapDispatchToProps = (dispatch) => ({
+  getPost: (id) => dispatch(getPost(id)),
+  getUsers: () => dispatch(getUsers()),
+});
 //getPost, getUsers 선언할 때 dispatch(action)하여 액션을 발생시키고 리듀서를 실행시킨다.
 
 export default connect(mapStateToProps, mapDispatchToProps)(SampleContainer);
