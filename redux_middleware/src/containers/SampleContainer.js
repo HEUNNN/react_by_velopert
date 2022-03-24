@@ -32,8 +32,6 @@ const mapStateToProps = (state) => ({
   loadingPost: state.sample.loading.GET_POST,
   loadingUsers: state.sample.loading.GET_USERS,
 });
+const mapDispatchToProps = { getPost, getUsers };
 
-export default connect(mapStateToProps, {
-  getPost,
-  getUsers,
-})(SampleContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(SampleContainer);
