@@ -13,7 +13,7 @@ const SampleContainer = ({
 }) => {
   useEffect(() => {
     getPost(1); //thunk
-    getUsers();
+    getUsers(1);
   }, [getPost, getUsers]);
 
   return (
@@ -27,14 +27,15 @@ const SampleContainer = ({
 };
 
 const mapStateToProps = (state) => ({
+  //state는 root 리듀서
   post: state.sample.post,
   users: state.sample.users,
-  loadingPost: state.sample.loading.GET_POST,
-  loadingUsers: state.sample.loading.GET_USERS,
+  loadingPost: state.loading["sample/GET_POST"],
+  loadingUsers: state.loading["sample/GET_USERS"],
 });
 const mapDispatchToProps = (dispatch) => ({
   getPost: (id) => dispatch(getPost(id)),
-  getUsers: () => dispatch(getUsers()),
+  getUsers: (id) => dispatch(getUsers(id)),
 });
 //getPost, getUsers 선언할 때 dispatch(action)하여 액션을 발생시키고 리듀서를 실행시킨다.
 
